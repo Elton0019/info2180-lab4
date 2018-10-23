@@ -10,17 +10,29 @@ window.onload = function (){
 		};
 //Excercise 2----------------------------------------------------------------------------------------------------------------------------------		
 let allBoundary = document.querySelectorAll(".boundary");
-
+let hit_wall = false;
 for (let index = 0; index < allBoundary.length; index++)
 {
 	allBoundary[index].onmouseover = function ()
 	{
-		for (let index2 = 0; index2 < allBoundary.length-1; index2++)
+		for (let j = 0; j < allBoundary.length-1; j++)
 		{
-			allBoundary[index2].setAttribute("class","boundary youlose");
+			allBoundary[j].setAttribute("class","boundary youlose");
+			hit_wall = true;
 		}
-	}
-};
+//Excercise 3----------------------------------------------------------------------------------------------------------------------------------
+
+			alert ("You Lose!");
+		}
+	};
+
+   	let win = document.getElementById("end");
+  	win.onmouseover = function()
+  	{
+  		if (hit_wall === false){
+  		alert ("You win!");
+		}
+	};
 
 //----------------------------------------------------------------------------------------------------------------------------------------------
  };
