@@ -21,8 +21,7 @@ for (let index = 0; index < allBoundary.length; index++)
 			hit_wall = true;
 		}
 //Excercise 3----------------------------------------------------------------------------------------------------------------------------------
-
-			alert ("You Lose!");
+		alert ("You Lose!");
 		}
 	};
 
@@ -33,6 +32,17 @@ for (let index = 0; index < allBoundary.length; index++)
   		alert ("You win!");
 		}
 	};
+
+//Exercise 4-----------------------------------------------------------------------------------------------------------------------------------
+
+let mazeStart = document.getElementById("start");
+  	mazeStart.onclick = function(){
+  		if (hit_wall === true){
+  			for (let m = 0; m < allBoundary.length-1; m++){
+  			allBoundary[m].setAttribute("class","boundary");
+  		}
+  	}
+   };
 
 //----------------------------------------------------------------------------------------------------------------------------------------------
  };
