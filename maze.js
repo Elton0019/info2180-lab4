@@ -44,7 +44,18 @@ let mazeStart = document.getElementById("start");
 			}
 			hit_wall = false;
   	}
-   };
+	 };
+
+//Exercise 6------------------------------------------------------------------------------------------------------------------------------------
+
+let cheat = document.getElementById("maze");
+	maze.onmouseleave = function (){
+		for (c = 0; c < allBoundary.length-1; c++){
+			allBoundary[c].setAttribute("class", "boundary youlose");
+		}
+		hit_wall = true;
+		document.getElementById("status").innerHTML = "You Lose!";
+  	};
 
 //----------------------------------------------------------------------------------------------------------------------------------------------
  };
