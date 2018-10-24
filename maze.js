@@ -21,7 +21,8 @@ for (let index = 0; index < allBoundary.length; index++)
 			hit_wall = true;
 		}
 //Excercise 3----------------------------------------------------------------------------------------------------------------------------------
-		alert("You Lose!");
+
+		document.getElementById("status").innerHTML = "You Lose!";//Exercise 5----------------------------------------------------------------------
 		}
 	};
 
@@ -29,7 +30,7 @@ for (let index = 0; index < allBoundary.length; index++)
   	win.onmouseover = function()
   	{
   		if (hit_wall === false){
-		alert("You Win!");
+				document.getElementById("status").innerHTML = "You Win!";//Exercise 5-------------------------------------------------------------------
 		}
 	};
 
